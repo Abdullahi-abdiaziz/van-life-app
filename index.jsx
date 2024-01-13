@@ -16,18 +16,22 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<Layout />}>
-          {/* <Route path="/hosts" element={<Dashboard />} /> */}
-          <Route element={<HostLayout />}>
-            <Route path="/hosts" element={<Dashboard />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/reviews" element={<Reviews />} />
-            <Route path="/income" element={<Income />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+
+          <Route path="hosts" element={<HostLayout />}>
+            <Route index element={<Dashboard />} />
+            <Route path="dashboard" element={<Dashboard />} />
+            <Route path="reviews" element={<Reviews />} />
+            <Route path="income" element={<Income />} />
           </Route>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/vans" element={<Vans />} />
-          <Route path="/vans/:id" element={<VanDetail />} />
+
+          <Route path="about" element={<About />} />
+
+          <Route path="vans">
+            <Route index element={<Vans />} />
+            <Route path=":id" element={<VanDetail />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>
