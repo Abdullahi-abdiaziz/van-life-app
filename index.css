@@ -45,12 +45,31 @@ nav a {
   color: #4d4d4d;
   font-weight: 600;
   padding: 5px 20px;
+  position: relative;
 }
 
 nav a:hover {
-  color: #161616;
+  color: #e17654;
+  transition: all 0.2s;
   text-decoration: underline;
 }
+
+.active {
+  text-decoration: underline;
+  font-weight: 700;
+  color: #e17654;
+}
+
+/* nav .active:hover::after {
+  content: "";
+  width: 40px;
+  height: 2px;
+  background-color: #161616;
+  color: #161616;
+  position: absolute;
+  bottom: 3px;
+  left: 18px;
+} */
 
 .host-nav {
   margin: 1rem;
