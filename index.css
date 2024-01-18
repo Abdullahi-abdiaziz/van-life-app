@@ -356,7 +356,7 @@ footer p {
 /* Host Vans */
 .host-vans,
 .host-van-details {
-  padding: 1.5rem 2rem;
+  padding: 0rem 2rem;
   min-height: calc(100vh - 5rem);
 }
 
